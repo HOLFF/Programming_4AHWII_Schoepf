@@ -14,6 +14,5 @@ public class FIzzBuzz {
         if ((g%4!=0)&&(g%3!=0)) s=Integer.toString(g);
         return  s;
     }
-    //dis a new comment
 }
 
