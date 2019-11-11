@@ -1,12 +1,13 @@
 package Schöpf;
 
-import java.util.Arrays;
 import java.util.Random;
 
 public class Shotgun_Sort {
+
+
     private static final Random generator = new Random();
 
-    public static void bogoSort(int[] array)  {
+    public static void shotgunSort(int[] array)  {
         while (!isSorted(array)) {
             for (int i = 0; i < array.length; i++){
                 int randomPosition = generator.nextInt(array.length);
@@ -27,9 +28,11 @@ public class Shotgun_Sort {
     }
 
     public static void main(String[] args) {
-        int [] array = {5,3,0,2,4,1,0,5,2,3,1,4};
-        System.out.println("Before: " + Arrays.toString(array));
-        bogoSort(array);
-        System.out.println("After:  " + Arrays.toString(array));
+        int[] arr = HelpFunctions.befüllen(10);
+        System.out.println("Before Shotgun sort:");
+        HelpFunctions.ausgabe(arr);
+        shotgunSort(arr);
+        System.out.println("After Shotgun sort:");
+        HelpFunctions.ausgabe(arr);
     }
 }
