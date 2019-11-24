@@ -1,5 +1,9 @@
 package Schöpf;
 
+import java.lang.reflect.Method;
+import java.util.function.Consumer;
+import java.util.function.IntConsumer;
+
 public class HelpFunctions {
     public static void ausgabe(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
@@ -13,5 +17,11 @@ public class HelpFunctions {
             arr[i]=r;
         }
         return arr;
+    }
+    public static long time(int[] arr, Consumer function) {
+        long startTime = System.nanoTime();
+        function.accept(arr);
+        long stopTime = System.nanoTime();
+        return (stopTime-startTime)/1000000;
     }
 }
