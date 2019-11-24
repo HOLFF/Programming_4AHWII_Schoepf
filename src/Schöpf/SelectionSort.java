@@ -20,9 +20,10 @@ public class SelectionSort {
         int[] arr = HelpFunctions.befüllen(10);
         System.out.println("Before Selection sort:");
         HelpFunctions.ausgabe(arr);
-        selectionSort(arr);
+        long time = HelpFunctions.time(arr,j->selectionSort(arr));
         System.out.println("After Selection sort:");
         HelpFunctions.ausgabe(arr);
+        System.out.println("Vergangene Zeit in Millisekunden:"+ (time));
     }
     }
 

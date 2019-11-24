@@ -28,11 +28,12 @@ public class Shotgun_Sort {
     }
 
     public static void main(String[] args) {
-        int[] arr = HelpFunctions.befüllen(10);
+        int[] arr = HelpFunctions.befüllen(12);
         System.out.println("Before Shotgun sort:");
         HelpFunctions.ausgabe(arr);
-        shotgunSort(arr);
+        long time = HelpFunctions.time(arr,j->shotgunSort(arr));
         System.out.println("After Shotgun sort:");
         HelpFunctions.ausgabe(arr);
+        System.out.println("Vergangene Zeit in Millisekunden:"+ (time));
     }
 }

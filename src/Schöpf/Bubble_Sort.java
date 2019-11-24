@@ -1,16 +1,21 @@
 package Schöpf;
 
-public class Bubble_Sort {
-    public static void main(String[] args){
+
+import java.util.function.Consumer;
+
+public class Bubble_Sort{
+    public static void main(String[] args)throws  Exception{
     int[] arr = HelpFunctions.befüllen(100);
     System.out.println("Before Bubble sort:");
     HelpFunctions.ausgabe(arr);
-    bubbleSort(arr);
+    long time = HelpFunctions.time(arr,j ->bubbleSort(arr));
     System.out.println("After Bubble sort:");
     HelpFunctions.ausgabe(arr);
+    System.out.println("Vergangene Zeit in Millisekunden:"+ (time));
+
     }
 
-    static public void bubbleSort(int[] arr) {
+     public static void bubbleSort(int[] arr) {
         int n = arr.length;
         int temp = 0;
         for(int i=0; i < n; i++){
@@ -23,6 +28,7 @@ public class Bubble_Sort {
 
             }
         }
+
 
     }
 }
