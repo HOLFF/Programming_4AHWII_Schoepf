@@ -3,6 +3,7 @@ out/
 *.class
 # completely ignore intellij stuff
 .idea/
+.idea/workspace.xml
 
 # File-based project format
 *.iws
