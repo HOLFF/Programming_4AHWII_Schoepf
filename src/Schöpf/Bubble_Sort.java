@@ -2,14 +2,14 @@ package Schöpf;
 
 public class Bubble_Sort{
 
-    public static void main(String[] args)throws  Exception{
-        int[] arr = HelpFunctions.befüllen(100);
+    public static void main(String[] args){
+        int[] arr = HelpFunctions.befüllen(200);
         System.out.println("Before Bubble sort:");
         HelpFunctions.ausgabe(arr);
-        long time = HelpFunctions.time(arr,j ->bubbleSort(arr));
+        long time = HelpFunctions.microtime(arr,j ->bubbleSort(arr));
         System.out.println("After Bubble sort:");
         HelpFunctions.ausgabe(arr);
-        System.out.println("Vergangene Zeit in Millisekunden:"+ (time));
+        System.out.println("Vergangene Zeit in Microsekunden:"+ (time));
 
     }
 

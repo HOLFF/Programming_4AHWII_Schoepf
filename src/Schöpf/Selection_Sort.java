@@ -1,15 +1,15 @@
 package Schöpf;
 
-public class SelectionSort {
+public class Selection_Sort {
 
     public static void main(String a[]){
         int[] arr = HelpFunctions.befüllen(10);
         System.out.println("Before Selection sort:");
         HelpFunctions.ausgabe(arr);
-        long time = HelpFunctions.time(arr,j->selectionSort(arr));
+        long time = HelpFunctions.microtime(arr,j->selectionSort(arr));
         System.out.println("After Selection sort:");
         HelpFunctions.ausgabe(arr);
-        System.out.println("Vergangene Zeit in Millisekunden:"+ (time));
+        System.out.println("Vergangene Zeit in Microsekunden:"+ (time));
 
     }
 

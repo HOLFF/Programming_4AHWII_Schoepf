@@ -8,29 +8,29 @@ public class Shotgun_Sort {
 
 
     public static void main(String[] args) {
-        int[] arr = HelpFunctions.befüllen(12);
+        int[] arr = HelpFunctions.befüllen(10);
         System.out.println("Before Shotgun sort:");
         HelpFunctions.ausgabe(arr);
-        long time = HelpFunctions.time(arr,j->shotgunSort(arr));
+        long time = HelpFunctions.microtime(arr,j->shotgunSort(arr));
         System.out.println("After Shotgun sort:");
         HelpFunctions.ausgabe(arr);
-        System.out.println("Vergangene Zeit in Millisekunden:"+ (time));
+        System.out.println("Vergangene Zeit in Millisekunden:"+ (time/1000));
     }
 
-    public static void shotgunSort(int[] array)  {
-        while (!isSorted(array)) {
-            for (int i = 0; i < array.length; i++){
-                int randomPosition = generator.nextInt(array.length);
-                int temp = array[i];
-                array[i] = array[randomPosition];
-                array[randomPosition] = temp;
+    public static void shotgunSort(int[] arr)  {
+        while (!isSorted(arr)) {
+            for (int i = 0; i < arr.length; i++){
+                int randomPosition = generator.nextInt(arr.length);
+                int temp = arr[i];
+                arr[i] = arr[randomPosition];
+                arr[randomPosition] = temp;
             }
         }
     }
 
-    private static boolean isSorted(int[] array)  {
-        for (int i = 1; i < array.length; i++){
-            if (array[i] < array[i - 1]) {
+    private static boolean isSorted(int[] arr)  {
+        for (int i = 1; i < arr.length; i++){
+            if (arr[i] < arr[i - 1]) {
                 return false;
             }
         }
