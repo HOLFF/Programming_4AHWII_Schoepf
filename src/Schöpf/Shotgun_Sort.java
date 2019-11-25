@@ -4,8 +4,18 @@ import java.util.Random;
 
 public class Shotgun_Sort {
 
-
     private static final Random generator = new Random();
+
+
+    public static void main(String[] args) {
+        int[] arr = HelpFunctions.befüllen(12);
+        System.out.println("Before Shotgun sort:");
+        HelpFunctions.ausgabe(arr);
+        long time = HelpFunctions.time(arr,j->shotgunSort(arr));
+        System.out.println("After Shotgun sort:");
+        HelpFunctions.ausgabe(arr);
+        System.out.println("Vergangene Zeit in Millisekunden:"+ (time));
+    }
 
     public static void shotgunSort(int[] array)  {
         while (!isSorted(array)) {
@@ -27,13 +37,4 @@ public class Shotgun_Sort {
         return true;
     }
 
-    public static void main(String[] args) {
-        int[] arr = HelpFunctions.befüllen(12);
-        System.out.println("Before Shotgun sort:");
-        HelpFunctions.ausgabe(arr);
-        long time = HelpFunctions.time(arr,j->shotgunSort(arr));
-        System.out.println("After Shotgun sort:");
-        HelpFunctions.ausgabe(arr);
-        System.out.println("Vergangene Zeit in Millisekunden:"+ (time));
-    }
 }
