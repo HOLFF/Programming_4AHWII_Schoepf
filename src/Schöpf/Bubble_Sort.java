@@ -3,17 +3,17 @@ package Schöpf;
 public class Bubble_Sort{
 
     public static void main(String[] args){
-        int[] arr = HelpFunctions.befüllen(200);
+        Integer[] arr = HelpFunctions.befüllen(200);
         System.out.println("Before Bubble sort:");
         HelpFunctions.ausgabe(arr);
-        long time = HelpFunctions.microtime(arr,j ->bubbleSort(arr));
+        long time = HelpFunctions.microtime(arr,Bubble_Sort::bubbleSort);
         System.out.println("After Bubble sort:");
         HelpFunctions.ausgabe(arr);
         System.out.println("Vergangene Zeit in Microsekunden:"+ (time));
 
     }
 
-     public static void bubbleSort(int[] arr) {
+     public static void bubbleSort(Integer[] arr) {
         int n = arr.length;
         int temp = 0;
         for(int i=0; i < n; i++){
