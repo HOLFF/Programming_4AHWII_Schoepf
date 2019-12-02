@@ -1,4 +1,4 @@
-package Schöpf;
+package Schöpf.HF;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package Schöpf;
+package Schöpf.Revision;
 
 public class FIzzBuzz {
     public static void main(String[] args){

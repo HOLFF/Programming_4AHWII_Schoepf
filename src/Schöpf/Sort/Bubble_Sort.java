@@ -1,4 +1,6 @@
-package Schöpf;
+package Schöpf.Sort;
+
+import Schöpf.HF.HelpFunctions;
 
 public class Bubble_Sort{
 
