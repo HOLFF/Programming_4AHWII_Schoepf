@@ -39,4 +39,10 @@ public class HelpFunctions {
         long stopTime = System.nanoTime();
         return (stopTime-startTime)/1000;
     }
+    public static int sum(int i){
+        if (i==1) return 1;
+        else{
+            return i+sum(i-1);
+        }
+    }
 }

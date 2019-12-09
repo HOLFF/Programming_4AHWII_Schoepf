@@ -10,7 +10,7 @@ public class Shotgun_Sort {
 
 
     public static void main(String[] args) {
-        Integer[] arr = HelpFunctions.befüllen(15);
+        Integer[] arr = HelpFunctions.befüllen(13);
         System.out.println("Before Shotgun sort:");
         HelpFunctions.ausgabe(arr);
         long time = HelpFunctions.microtime(arr,Shotgun_Sort::shotgunSort);
