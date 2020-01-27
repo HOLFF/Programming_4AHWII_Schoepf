@@ -4,7 +4,7 @@ import Schöpf.HF.HelpFunctions;
 
 public class Quick_Sort {
     public static void main(String[] args){
-        Integer[] arr = HelpFunctions.befüllen(10000000);
+        Integer[] arr = HelpFunctions.befüllen(10000);
         System.out.println("Before Quick sort:");
         //HelpFunctions.ausgabe(arr);
         long time = HelpFunctions.microtime(arr,Quick_Sort::qs);
