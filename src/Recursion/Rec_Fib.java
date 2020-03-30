@@ -1,4 +1,4 @@
-package Schöpf.Recursion;
+package Recursion;
 
 public class Rec_Fib {
     public static void main(String[] args){

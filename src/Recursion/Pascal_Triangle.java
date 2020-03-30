@@ -1,4 +1,4 @@
-package Schöpf.Recursion;
+package Recursion;
 
 public class Pascal_Triangle {
     public static void main(String[] args){

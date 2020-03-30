@@ -1,4 +1,4 @@
-package Schöpf.Recursion;
+package Recursion;
 
 public class modulo_recursive {
     public static void main(String[]args)throws Exception{

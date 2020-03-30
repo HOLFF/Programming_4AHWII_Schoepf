@@ -1,6 +1,4 @@
-package Schöpf.Recursion;
-
-import Schöpf.HF.HelpFunctions;
+package Recursion;
 
 public class Pascal_Triangle_it {
     public static void main(String[] args){

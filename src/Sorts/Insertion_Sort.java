@@ -1,6 +1,6 @@
-package Schöpf.Sort;
+package Sorts;
 
-import Schöpf.HF.HelpFunctions;
+import HF.HelpFunctions;
 
 import java.util.ArrayList;
 
