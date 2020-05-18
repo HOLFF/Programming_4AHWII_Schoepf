@@ -25,10 +25,17 @@ public class LinkedList {
     public void delete(int pos) {
         try {
         int idx=1;
-        if (pos<0)throw new NullPointerException("Outside of List");
+        if(head==null) throw new NullPointerException("List empty");
+        if (pos<0)throw new NullPointerException("Argument smaller Zero");
         if(pos==0){
-            head=head.next();
-            return;
+            if(!head.hasNext()){
+                head=null;
+                return;
+            }
+            else {
+                head = head.next();
+                return;
+            }
         }
         Node del=head;
             while(idx<pos){
@@ -45,7 +52,6 @@ public class LinkedList {
         }
         catch (NullPointerException E){
             E.printStackTrace();
-            System.out.println("Out of Bounds");
         }
 
     }
@@ -53,15 +59,16 @@ public class LinkedList {
 
     @Override
     public String toString() {
-        String ret = "";
-
-        Node it = head;
-        while (it.hasNext()) {
+            String ret = "";
+            if (head == null) return "()";
+                Node it = head;
+            while (it.hasNext()) {
+                ret += "" + it.getValue() + " ";
+                it = it.next();
+            }
             ret += "" + it.getValue() + " ";
-            it = it.next();
-        }
-        ret += "" + it.getValue() + " ";
-        return ret;
+            return ret;
+
     }
 
 
@@ -72,6 +79,8 @@ public class LinkedList {
 
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
+        ll.add(1);
+        /*
         ll.add(4);
         ll.add(6);
         ll.add(8);
@@ -81,6 +90,7 @@ public class LinkedList {
         ll.add(89);
         ll.add(73);
         ll.add(17);
+        */
         System.out.println(ll);
         ll.delete(-1);
         ll.delete(0);
