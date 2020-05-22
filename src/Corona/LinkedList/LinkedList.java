@@ -1,8 +1,13 @@
 package Corona.LinkedList;
+
 import java.util.ArrayList;
 
 public class LinkedList {
     private Node head;
+
+    public void add(){
+        //default
+    }
 
     public void add(int value) {
         Node tmp = new Node(value);
@@ -20,6 +25,31 @@ public class LinkedList {
         }
 
         it.setNext(tmp);
+    }
+
+    public void add(int pos, int value){
+        Node tmp= new Node(value);
+        try {
+            int idx=1;
+            if(head==null) head =tmp;
+            if (pos<0)throw new NullPointerException("Argument smaller Zero");
+            Node add= head;
+            while(idx<pos){
+                add=add.next();
+                idx++;
+            }
+            if(add.hasNext()){
+                tmp.setNext(add.next());
+                add.setNext(tmp);
+            }
+            else{
+                add.setNext(tmp);
+                tmp.setNext(null);
+            }
+        }catch (NullPointerException E){
+            E.printStackTrace();
+        }
+
     }
 
     public void delete(int pos) {
